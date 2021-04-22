@@ -12,12 +12,13 @@ public class TwoSums {
     }
 
     public static int[] twoSum(int[] nums, int target) {
+        //<Complement, Index>
         Hashtable<Integer, Integer> hashtable = new Hashtable<>();
         for (int i = 0; i < nums.length; i++) {
-            if (hashtable.contains(target - nums[i])) {
-                return new int[] {i, target - i};
+            if (hashtable.containsKey(nums[i])) {
+                return new int[] {hashtable.get(nums[i]), i};
             }
-            hashtable.put(i, target - nums[i]);
+            hashtable.put(target - nums[i], i);
         }
         return new int[] {-1, -1};
     }
