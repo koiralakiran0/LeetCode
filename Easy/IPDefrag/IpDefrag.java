@@ -1,4 +1,4 @@
-package Easy;
+package Easy.IPDefrag;
 
 public class IpDefrag {
     public static void main(String[] args) {
