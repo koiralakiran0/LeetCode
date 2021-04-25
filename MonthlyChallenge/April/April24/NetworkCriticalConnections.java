@@ -10,6 +10,7 @@ public class NetworkCriticalConnections {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
+        Solution2 s2 = new Solution2();
         List<List<Integer>> lists = new ArrayList<>();
         List<Integer> list1 = Arrays.asList(0,1);
         List<Integer> list2 = Arrays.asList(1,2);
@@ -20,7 +21,8 @@ public class NetworkCriticalConnections {
         lists.add(list3);
         lists.add(list4);
         
-        System.out.println(solution.criticalConnections(4, lists));
+        //System.out.println(solution.criticalConnections(4, lists));
+        System.out.println(s2.criticalConnections(4, lists));
     }
 
     
@@ -71,5 +73,40 @@ class Solution {
                 lowTimes[currNode] = Math.min(lowTimes[currNode], visitedTimes[neighbour]);
             }
         }
+    }
+}
+
+class Solution2 {
+    public List<List<Integer>> criticalConnections(int n, List<List<Integer>> connections) {
+        //DOES NOT WORK. Tried it just to see if it did
+        HashMap<Integer, List<Integer>> hashMap = new HashMap<>();
+        List<List<Integer>> result = new ArrayList<>();
+        for (List<Integer> list : connections) {
+            if (hashMap.keySet().contains(list.get(0))) {
+                hashMap.get(list.get(0)).add(list.get(1));
+            } else {
+                ArrayList<Integer> newList = new ArrayList<>();
+                newList.add(list.get(list.get(1)));
+                hashMap.put(list.get(0), newList);
+            }
+
+            if (hashMap.keySet().contains(list.get(1))) {
+                hashMap.get(list.get(1)).add(list.get(0));
+            } else {
+                ArrayList<Integer> newList = new ArrayList<>();
+                newList.add(list.get(list.get(0)));
+                hashMap.put(list.get(1), newList);
+            }
+        }
+
+        for (int i : hashMap.keySet()) {
+            if (hashMap.get(i).size() == 1){
+                ArrayList<Integer> rList = new ArrayList<>();
+                rList.add(i);
+                rList.add(hashMap.get(i).get(0));
+                result.add(rList);
+            }
+        }
+        return result;
     }
 }
