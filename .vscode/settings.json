@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "MonthlyChallenge/April"
+        "MonthlyChallenge/April",
+        "MaxDepthBinaryTree"
     ]
 }
