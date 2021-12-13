@@ -4,5 +4,13 @@
 	<classpathentry kind="src" path="MonthlyChallenge/April/April27"/>
 	<classpathentry kind="src" path="Easy/MyHashSet"/>
 	<classpathentry kind="src" path="MonthlyChallenge/April/April30"/>
+	<classpathentry kind="src" path="Easy/CrawlerLogFolder"/>
+	<classpathentry kind="src" path="MonthlyChallenge/May/May07"/>
+	<classpathentry kind="src" path="MonthlyChallenge/May/May11"/>
+	<classpathentry kind="src" path="NewIdeas/Memoization"/>
+	<classpathentry kind="src" path="Hard"/>
+	<classpathentry kind="src" path="MonthlyChallenge/June"/>
+	<classpathentry kind="src" path="MonthlyChallenge/Auguest"/>
+	<classpathentry kind="src" path="NewIdeas/Puzzles"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

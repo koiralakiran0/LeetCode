@@ -11,7 +11,7 @@ public class PowerfulIntegers {
 class SolutionPowerfulIntegers {
     public List<Integer> powerfulIntegers(int x, int y, int bound) {
         if (bound < 1) return new ArrayList<>();
-        List<Integer> combined = new ArrayList();
+        List<Integer> combined = new ArrayList<>();
         List<Integer> xPowers = getIntegerList(x, bound);
         List<Integer> yPowers = getIntegerList(y, bound);
         

@@ -4,7 +4,7 @@ public class MyHashSet {
     ArrayList<Integer> arrayList;
     /** Initialize your data structure here. */
     public MyHashSet() {
-        arrayList = new ArrayList();
+        arrayList = new ArrayList<>();
     }
     
     public void add(int key) {
